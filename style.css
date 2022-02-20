@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kumbh+Sans:wght@200;400;700&family=Lexend+Deca&family=Outfit:wght@200;300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--dark-cyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -650px left -700px, bottom -650px right -700px;
+  color: var(--dark-desaturated-blue);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  background-color: #fff;
+  max-width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  transform: scale(0.8);
+}
+.profileInfo {
+  margin: 0 0 30px;
+}
+.profileInfo__img-content {
+  transform: translateY(-50%);
+}
+.profileInfo__photo {
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+.profileInfo__name {
+  margin: -2em 0 0.5em;
+}
+.profileInfo__age {
+  padding: 0 10px;
+}
+.profileInfo--text {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+.line {
+  background-color: var(--dark-gray);
+}
+.status {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 700;
+  margin: 30px 0;
+}
+.status__name {
+  display: block;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 80%;
+  color: var(--dark-grayish-blue);
+}
+.attribution {
+  margin: 0 auto;
+  font-size: 0.6em;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 600px) {
+  body {
+    background-position: top -650px left -500px, bottom -650px right -500px;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    background-position: top -650px left -200px, bottom -650px right -200px;
+  }
+  .profile {
+    transform: scale(1);
+  }
+}
